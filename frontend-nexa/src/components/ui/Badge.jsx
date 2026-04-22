@@ -1,14 +1,23 @@
-// src/components/ui/Badge.jsx
+/**
+ * Simple badge component with color variants.
+ *
+ * Props:
+ * - label: badge text
+ * - color: one of 'default' | 'teknologi' | 'kesehatan' | 'bisnis'
+ */
 export default function Badge({ label, color = 'default' }) {
   const colors = {
-    default:    'bg-white/10 text-white border border-white/20',
-    teknologi:  'bg-blue-500/20  text-blue-300  border border-blue-500/30',
-    kesehatan:  'bg-green-500/20 text-green-300 border border-green-500/30',
-    bisnis:     'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30',
+    default: 'bg-white/10 text-white border border-white/20',
+    teknologi: 'bg-blue-500/20 text-blue-300 border border-blue-500/30',
+    kesehatan: 'bg-green-500/20 text-green-300 border border-green-500/30',
+    bisnis: 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30',
   }
-
   return (
-    <span className={`px-3 py-1 rounded-full text-xs font-medium ${colors[color] || colors.default}`}>
+    <span
+      className={`px-3 py-1 rounded-full text-xs font-medium ${
+        colors[color] || colors.default
+      }`}
+    >
       {label}
     </span>
   )
